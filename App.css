@@ -1,0 +1,246 @@
+/* General styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff; /* Simple white background */
+  color: #333; /* Soft, readable text color */
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%; /* Take the full height of the page */
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden; /* Prevent overflow outside of the page */
+}
+
+/* Header */
+header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #ff6f91; /* Bright pink */
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Task Input */
+.task-input {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.city-search {
+  flex-grow: 1; /* Expand input to fill space */
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  color: #333;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+.city-search:focus {
+  border-color: #ff6f91;
+  box-shadow: 0 0 5px rgba(255, 111, 145, 0.5);
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ff6f91; /* Bright pink */
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff3f6f; /* Darker pink */
+  transform: translateY(-3px); /* Slight lift */
+  box-shadow: 0 4px 10px rgba(255, 63, 111, 0.4);
+}
+
+/* Task List */
+.weather-info {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+.task-list {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1; /* Allow task list to grow and take up remaining space */
+  overflow-y: auto; /* Allow scrolling within task list */
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 10px;
+  background: #f9f9f9; /* Light background for task */
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.task-item.completed {
+  text-decoration: line-through;
+  background-color: #e7ffe7; /* Light green for completed tasks */
+}
+
+.task-item:hover {
+  transform: translateY(-3px); /* Slight hover effect */
+}
+
+.task-actions button {
+  margin-left: 5px;
+  background: none;
+  border: none;
+  color: #ff6f91;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.task-actions button:hover {
+  color: #ff3f6f;
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.current-time {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #777;
+}
+
+/* Authentication form styles */
+input[type="email"], input[type="password"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  margin-right: 10px;
+  outline: none;
+  width: 200px;
+  box-sizing: border-box;
+}
+
+input[type="email"]:focus, input[type="password"]:focus {
+  border-color: #ff6f91;
+  box-shadow: 0 0 5px rgba(255, 111, 145, 0.5);
+}
+
+/* DatePicker container styles */
+.date-picker-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#task-date {
+  margin-top: 10px;
+}
+
+/* Toast Container */
+.Toastify__toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+/* App.css */
+
+/* Current Time Style */
+.current-time {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.current-time p {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  font-weight: bold;
+}
+
+.current-time p {
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.current-time p:hover {
+  background-color: #e0e0e0;
+  cursor: pointer;
+}
+/* Authentication form styles */
+input[type="email"], input[type="password"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  outline: none;
+  width: 200px;
+  box-sizing: border-box;
+}
+
+input[type="email"]:focus, input[type="password"]:focus {
+  border-color: #ff6f91;
+  box-shadow: 0 0 5px rgba(255, 111, 145, 0.5);
+}
+
+/* Style for the login form container */
+.login-form {
+  display: flex;
+  justify-content: center;  /* Center the form */
+  align-items: center;
+  gap: 20px;  /* Space between input fields */
+  margin-bottom: 20px;
+}
+
+.login-form input {
+  width: auto;  /* Allow input fields to be side-by-side */
+  max-width: 250px;  /* Limit the width of the inputs */
+}
+
+.login-form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ff6f91; /* Bright pink */
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
